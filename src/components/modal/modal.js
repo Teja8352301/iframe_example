@@ -11,9 +11,8 @@ export const ModalMui = (props) =>{
 	onClose={props.closeModal}
 	aria-labelledby="modal-modal-title"
 	aria-describedby="modal-modal-description"
+	sx={{display:'flex',alignItems:'center',justifyContent:'center'}}
   >
-	<Box>
-	<Iframe id="iframe_teja" source={"/lppdp"} title="Liverpool Project"/>
-	</Box>
+	<Iframe afterLoad={props.afterLoad} styling={{overflow:'hidden',transform:'scale(0.60,0.60)',width:'1000px',height:'700px'}} id="iframe_teja_desk" source={"/lppdp"} title="Liverpool Project"/>
   </Modal>
 }
